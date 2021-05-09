@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+
+    <style>
+        #canvas {
+            width: 800px;
+            height: 600px;
+            margin: auto;
+            position: relative;
+            border: 1px solid black;
+            background-color: #E0E0E0;
+        }
+
+        .ferris {
+            width: 80px;
+            height: 50px;
+            position: absolute;
+            background-image: url("https://blog.nodraak.fr/images/2020/06/wasm-ferris.png");
+            background-size: cover;
+        }
+    </style>
+
+    <script type="module">
+        import init, { main } from './pkg/throwing_ferris.js';
+        async function run() {
+            await init();
+            main();
+        }
+        run();
+    </script>
+</head>
+
+<body>
+    <p>Hello from html.</p>
+</body>
+
+</html>
